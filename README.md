@@ -1,16 +1,16 @@
-## Fashion Products Scraper
+# Fashion Products Scraper
 
 Fashion Products Scraper is a standalone module for scraping fashionn products data from the fashion retailers' web-sites. 
 
-## Supported List of Product Categories
+# Supported List of Product Categories
 
-# Female Categories
+## Female Categories
 1. Handbags
 2. Shoes
 3. Dresses
 4. Shirts
 
-# Male Categories
+## Male Categories
 
 1. Shirts
 2. Trousers
@@ -28,7 +28,7 @@ Fashion Products Scraper is a standalone module for scraping fashionn products d
 
 The module supports a number of database options - SQLite, MongoDB, and Cassandra.
 
-## How To Run Scraper
+# How To Run Scraper
 
 Scraper has a number of parameters to specify upon running the scraper from Shell script or command line. The parameters tell the scraper where and what to scraper, as well as in whats quantities, and where to store data, afterwards.
 

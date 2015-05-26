@@ -44,3 +44,9 @@ Two options are available for that parameter - limited, all. l
 
 -d -- the type of database to use for storing scraper's results. 
 Three options are available for the parameter - sql, mongo, cassandra.
+
+# The Road Map
+
+1. Enabling full-text search with ElasticSearch integration
+2. Enhancing search using fashion featsures (e.g. "coats with leather strap") using Natural Language Processing 
+3. Fashion product tagging by introducing SVM-based classification 

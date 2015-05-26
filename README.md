@@ -1,12 +1,12 @@
 # Fashion Products Scraper
 
-Fashion Products Scraper is a standalone module for scraping fashionn products data from the fashion retailers' web-sites. It is written in Java 7. 
+Fashion Products Scraper is a standalone module for scraping fashion products metadata from the fashion retailers' web-sites. Written in Java 7 with an integration of Spring dependency injection, and Jsoup HTML documents parser.
 
-# The Project Road Map - 2015 - 2016
+# The Project Road Map - 2015 
 
 1. Enabling full-text search with ElasticSearch integration
-2. Enhancing search using fashion features (e.g. "coats with leather strap") using Natural Language Processing 
-3. Fashion product tagging by introducing SVM-based classification 
+2. Enhancing search using fashion features (e.g. "coats with leather strap") using natural language 
+3. Fashion product auto-tagging by introducing SVM-based classification 
 
 # Supported List of Product Categories
 
@@ -40,13 +40,10 @@ Scraper has a number of parameters to specify upon running the scraper from Shel
 
 -s -- store name
 
--c -- categories to be scraped listed with a comma separator in the following format: "category-gender"
-For instance, "shoes-m,shoes-f,shirts-m,jackets-m" tells the scraper to scrape shoes for men, shoes for women, shirts for men, and jackets for men.
+-c -- categories to be scraped listed with a comma separator in the following format: "category-gender". For instance, "shoes-m,shoes-f,shirts-m,jackets-m" tells the scraper to scrape shoes for men, shoes for women, shirts for men, and jackets for men.
 
--m -- tells the scraper whether to scrape the whole inventory available for the category on the web-site or not
-Two options are available for that parameter - limited, all. l
+-m -- tells the scraper whether to scrape the whole inventory available for the category on the web-site or not. Two options are available for that parameter - limited, or all.
 
 -q -- if previous parameter, m, has a value - limited, then q tells the scraper what number of products to scrape for the retailer's web-site. For instance, if q is 20, then, for every category listed in c parameter, there is going to be 20 products scraped from the retailer's web-site.
 
--d -- the type of database to use for storing scraper's results. 
-Three options are available for the parameter - sql, mongo, cassandra
+-d -- the type of database to use for storing scraper's results. Three options are available for the parameter - sql, mongo, cassandra

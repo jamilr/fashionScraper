@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:beans="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.1.xsd
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/spring-beans-4.1.xsd
+        http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.1.xsd">
+
+    <tx:annotation-driven />
+    <context:component-scan base-package="com.maiamall"/>
+
+    <context:property-placeholder location="classpath*:log4j.properties" />
+
+    <beans:bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName"    value="org.fscraper.data.sql.SQLiteDialect"/>
+        <property name="url"                value="jdbc:sqlite:/home/jamilr/sources/scraper/data/maiamall.s3db"/>
+        <property name="username"           value=""/>
+        <property name="password"           value=""/>
+    </beans:bean>
+
+    <beans:bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+        <property name="dataSource" ref="dataSource" />
+        <property name="packagesToScan" value="com.maiamall.data.sql.model" />
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.dialect">org.fscraper.data.sql.SQLiteDialect</prop>
+                <prop key="hibernate.show_sql">
+                    false
+                </prop>
+                <prop key="show_sql">
+                    false
+                </prop>
+                <prop key="hibernate.generate_statistics">
+                    false
+                </prop>
+                <prop key="hibernate.use_sql_comments">
+                    false
+                </prop>
+                <prop key="hibernate.hbm2ddl.auto">
+                    validate
+                </prop>
+            </props>
+        </property>
+    </beans:bean>
+
+    <beans:bean id="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+        <property name="sessionFactory" ref="sessionFactory" />
+    </beans:bean>
+
+    <bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor" />
+</beans>

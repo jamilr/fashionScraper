@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<applicationSettings>
+    <db>
+        <connectionUrl>localhost</connectionUrl>
+        <dbname>MaiaMallAppDB</dbname>
+        <port>27017</port>
+        <user></user>
+        <password></password>
+    </db>
+</applicationSettings>

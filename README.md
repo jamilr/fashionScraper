@@ -2,7 +2,7 @@
 
 Fashion Products Scraper is a standalone module for scraping fashion products metadata from the fashion retailers' web-sites. Written in Java 7 with an integration of Spring dependency injection, and Jsoup HTML documents parser.
 
-# The Project Road Map - 2015 
+# The Project Road Map 
 
 1. Enabling full-text search with ElasticSearch integration
 2. Enhancing search using fashion features (e.g. "coats with leather strap") using natural language 

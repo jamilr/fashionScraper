@@ -5,7 +5,7 @@ Fashion Products Scraper is a standalone module for scraping fashionn products d
 # The Project Road Map - 2015 - 2016
 
 1. Enabling full-text search with ElasticSearch integration
-2. Enhancing search using fashion featsures (e.g. "coats with leather strap") using Natural Language Processing 
+2. Enhancing search using fashion features (e.g. "coats with leather strap") using Natural Language Processing 
 3. Fashion product tagging by introducing SVM-based classification 
 
 # Supported List of Product Categories

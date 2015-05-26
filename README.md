@@ -1,6 +1,12 @@
 # Fashion Products Scraper
 
-Fashion Products Scraper is a standalone module for scraping fashionn products data from the fashion retailers' web-sites. 
+Fashion Products Scraper is a standalone module for scraping fashionn products data from the fashion retailers' web-sites. It is written in Java 7. 
+
+# The Project Road Map - 2015 - 2016
+
+1. Enabling full-text search with ElasticSearch integration
+2. Enhancing search using fashion featsures (e.g. "coats with leather strap") using Natural Language Processing 
+3. Fashion product tagging by introducing SVM-based classification 
 
 # Supported List of Product Categories
 
@@ -43,10 +49,4 @@ Two options are available for that parameter - limited, all. l
 -q -- if previous parameter, m, has a value - limited, then q tells the scraper what number of products to scrape for the retailer's web-site. For instance, if q is 20, then, for every category listed in c parameter, there is going to be 20 products scraped from the retailer's web-site.
 
 -d -- the type of database to use for storing scraper's results. 
-Three options are available for the parameter - sql, mongo, cassandra.
-
-# The Road Map
-
-1. Enabling full-text search with ElasticSearch integration
-2. Enhancing search using fashion featsures (e.g. "coats with leather strap") using Natural Language Processing 
-3. Fashion product tagging by introducing SVM-based classification 
+Three options are available for the parameter - sql, mongo, cassandra

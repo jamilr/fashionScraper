@@ -29,6 +29,19 @@ CREATE TABLE [Season] (
   [name] VARCHAR(40)  NOT NULL
 );
 
+DROP TABLE IF EXISTS [Post];
+CREATE TABLE [Post] (
+  [id] INTEGER  NOT NULL PRIMARY KEY AUTOINCREMENT,
+  [title]     VARCHAR(100)  NOT NULL,
+  [imageURL]  VARCHAR(200)  NOT NULL,
+  [author]    VARCHAR(50)  NOT NULL,
+  [date]      DATETIME  NOT NULL,
+  [postURL]   VARCHAR(200)  NOT NULL,
+  [shortDescription] VARCHAR(400)  NOT NULL,
+  [style_id] INT NOT NULL,
+  [brand_id] INT NOT NULL
+);
+
 DROP TABLE IF EXISTS [Product];
 CREATE TABLE [Product] (
 [id]            INTEGER       PRIMARY KEY AUTOINCREMENT NOT NULL,
@@ -124,6 +137,7 @@ INSERT INTO Store(shortName, longName, logourl) VALUES('MS', 'Marks and Spencer'
 INSERT INTO Store(shortName, longName, logourl) VALUES('BR', 'Burberry',          'http://upload.wikimedia.org/wikipedia/en/0/03/Burberry_logo.png');
 INSERT INTO Store(shortName, longName, logourl) VALUES('PR', 'Prada',             'http://www.prada.com/etc/designs/prada/images/base/ipad_logo_bianco.png');
 INSERT INTO Store(shortName, longName, logourl) VALUES('ZR', 'Zara',              'http://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Zara_Logo_2.svg/2000px-Zara_Logo_2.svg.png');
+INSERT INTO Store(shortName, longName, logourl) VALUES('FC', 'French Connection', 'http://www.bitterwallet.com/wp-content/uploads/2015/04/french-connection.jpg');
 
 /*Category*/
 INSERT INTO Category(name) VALUES('Shoes');         /*1*/
@@ -283,3 +297,15 @@ INSERT INTO StoreCategory(store_id, category_id, gender, url, quantity)  VALUES(
 INSERT INTO StoreCategory(store_id, category_id, gender, url, quantity)  VALUES(8, 4, 1, "http://www.zara.com/uk/en/man/shirts/view-all-c719520.html",              20);
 INSERT INTO StoreCategory(store_id, category_id, gender, url, quantity)  VALUES(8, 5, 1, "http://www.zara.com/uk/en/man/trousers/view-all-c719514.html",            20);
 INSERT INTO StoreCategory(store_id, category_id, gender, url, quantity)  VALUES(8, 6, 1, "http://www.zara.com/uk/en/man/jackets-c586542.html",   20);
+
+/*French Connection*/
+INSERT INTO StoreCategory(store_id, category_id, gender, url, quantity)  VALUES(9, 1, 0, "http://www.frenchconnection.com/category/Woman+Collections+Shoes/Shoes.htm",  20);
+INSERT INTO StoreCategory(store_id, category_id, gender, url, quantity)  VALUES(9, 2, 0, "http://www.frenchconnection.com/category/Bags/Bags.htm",                   20);
+INSERT INTO StoreCategory(store_id, category_id, gender, url, quantity)  VALUES(9, 3, 0, "http://www.frenchconnection.com/category/Woman+Collections+Dresses/Dresses.htm",                    20);
+INSERT INTO StoreCategory(store_id, category_id, gender, url, quantity)  VALUES(9, 4, 0, "http://www.frenchconnection.com/category/Woman+Collections+Tops/Tops.htm",         20);
+
+/*French Connection*/
+INSERT INTO StoreCategory(store_id, category_id, gender, url, quantity)  VALUES(9, 1, 1, "http://www.frenchconnection.com/category/Man+Collections+Shoes/Mens+Shoes.htm",        20);
+INSERT INTO StoreCategory(store_id, category_id, gender, url, quantity)  VALUES(9, 4, 1, "http://www.frenchconnection.com/category/Man+Collections+Shirts/Mens+Shirts.htm",              20);
+INSERT INTO StoreCategory(store_id, category_id, gender, url, quantity)  VALUES(9, 5, 1, "http://www.frenchconnection.com/category/Man+Collections+Trousers/Mens+Trousers.htm",            20);
+INSERT INTO StoreCategory(store_id, category_id, gender, url, quantity)  VALUES(9, 6, 1, "http://www.frenchconnection.com/category/Man+Collections+Coats+And+Jackets/Mens+Jackets+Coats.htm",   20);

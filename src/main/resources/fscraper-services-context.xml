@@ -10,20 +10,20 @@
         http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.1.xsd">
 
     <tx:annotation-driven />
-    <context:component-scan base-package="com.maiamall"/>
+    <context:component-scan base-package="org.fscraper"/>
 
     <context:property-placeholder location="classpath*:log4j.properties" />
 
     <beans:bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="driverClassName"    value="org.fscraper.data.sql.SQLiteDialect"/>
-        <property name="url"                value="jdbc:sqlite:/home/jamilr/sources/scraper/data/maiamall.s3db"/>
+        <property name="url"                value="jdbc:sqlite:/home/jamilr/sources/fashionScraper/data/data.s3db"/>
         <property name="username"           value=""/>
         <property name="password"           value=""/>
     </beans:bean>
 
     <beans:bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
         <property name="dataSource" ref="dataSource" />
-        <property name="packagesToScan" value="com.maiamall.data.sql.model" />
+        <property name="packagesToScan" value="org.fscraper.data.sql.model" />
         <property name="hibernateProperties">
             <props>
                 <prop key="hibernate.dialect">org.fscraper.data.sql.SQLiteDialect</prop>

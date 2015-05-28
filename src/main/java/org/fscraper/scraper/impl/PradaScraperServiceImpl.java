@@ -22,7 +22,9 @@ import java.util.Set;
  */
 
 @Service("PR")
-public class PradaScraperServiceImpl extends AbstractScraperService implements ScraperService {
+public class PradaScraperServiceImpl
+        extends AbstractScraperService
+        implements ScraperService {
 
     public static Logger logger = Logger.getLogger(PradaScraperServiceImpl.class.getName());
 

@@ -27,7 +27,6 @@ public class CassandraDBContext implements DbContext {
     private Session session;
 
 
-    @PostConstruct
     public void init() {
 
         logger.info("MongoDBContext is to read configuration settings and establish connection to the remote database instance");

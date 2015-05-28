@@ -15,7 +15,7 @@ import java.util.logging.Logger;
  * @author Jamil Rzayev March, 2015
  */
 
-@Component("ConfigReader")
+@Component("ContextLoader")
 public class ContextLoader {
 
     private static final String CONFIG_PROPERTIES = "/config.properties";

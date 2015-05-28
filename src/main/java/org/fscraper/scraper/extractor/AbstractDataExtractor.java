@@ -56,10 +56,9 @@ public abstract class AbstractDataExtractor implements DataExtractor {
 
         String title = TextHelper.removeAllNonUnicode(getTitle());
         String brand = TextHelper.removeAllNonUnicode(getBrand());
+
         String price = getPrice();
-
         String sku = TextHelper.removeAllNonUnicode(getSKU());
-
         String description = TextHelper.removeAllNonUnicode(getDescription());
 
         Set<String> imgURLSet = getImages();
@@ -69,11 +68,9 @@ public abstract class AbstractDataExtractor implements DataExtractor {
         productView.setTitle(title);
         productView.setBrand(brand);
         productView.setPrice(price);
-
-        productView.setDescription(description);
-
         productView.setSku(sku);
 
+        productView.setDescription(description);
         productView.setImgURLList(imgURLSet);
 
         if (this.toScrapeSizes)
